@@ -24,9 +24,14 @@ public class Task09 {
     public static void main(String[] args) {
         System.out.println(sumDigitsInNumber(546));
     }
+        public static int sumDigitsInNumber(int number) {
+            int third =  number % 10;
+            int first = (number - number % 100) / 100;
+            int second = (number % 100 - third) / 10;
+            int sum = first + second + third;
+            return sum;
 
-    public static int sumDigitsInNumber(int number) {
-        //напишите тут ваш код
-        return 0;
+        }
+
     }
-}
+
